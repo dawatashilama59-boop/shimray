@@ -1,150 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>정성밥상 | Homemade Korean Food</title>
-
-<style>
-
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-}
-
-/* HERO SECTION */
-.hero {
-    background: url('https://images.unsplash.com/photo-1498654896293-37aacf113fd9') no-repeat center;
-    background-size: cover;
-    height: 100vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-content {
-    background: rgba(0,0,0,0.6);
-    padding: 40px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.hero h1 {
-    font-size: 50px;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 18px;
-    margin: 10px 0 20px;
-}
-
-.btn {
-    background: #ff4d4d;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* MENU */
-.menu {
-    padding: 50px;
-    text-align: center;
-    background: #f9f9f9;
-}
-
-.menu h2 {
-    margin-bottom: 30px;
-}
-
-.menu-items {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.item {
-    width: 250px;
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.item img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* ABOUT */
-.about {
-    padding: 40px;
-    text-align: center;
-}
-
-/* FOOTER */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chic Crochet Creations</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<!-- HERO -->
-<div class="hero">
-    <div class="hero-content">
-        <h1>정성밥상</h1>
-        <p>Homemade Hygienic Korean Food</p>
-        <a href="#" class="btn">Order Now</a>
-    </div>
-</div>
+    <div class="background-image"></div>
 
-<!-- MENU -->
-<div class="menu">
-    <h2>Our Menu</h2>
-
-    <div class="menu-items">
-
-        <div class="item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kimchi.jpg">
-            <h3>Kimchi</h3>
-            <p>Fresh homemade kimchi</p>
-            <p><strong>₩8,000</strong></p>
+    <header>
+        <div class="container">
+            <h1 class="logo">Chic Crochet</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Patterns</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Gimbap.jpg">
-            <h3>Kimbap</h3>
-            <p>Healthy handmade kimbap</p>
-            <p><strong>₩4,500</strong></p>
+    <main>
+        <div class="container">
+            <section class="hero-section">
+                <h2>Discover Your Next Modern Crochet Project</h2>
+                <p>Explore our curated collection of contemporary crochet patterns. From cozy blankets and chic homeware to trendy accessories and apparel, we have a pattern for every skill level. </p>
+                <div class="pattern-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="homeware">Homeware</button>
+                    <button class="filter-btn" data-category="fashion">Fashion</button>
+                    <button class="filter-btn" data-category="toys">Toys (Amigurumi)</button>
+                </div>
+            </section>
+
+            <section class="patterns-grid" id="patterns-grid">
+                <div class="pattern-card" data-category="homeware">
+                    <div class="pattern-icon"><i class="fas fa-blanket"></i> </div>
+                    <h3>T-Shirt Yarn Basket</h3>
+                    <p class="difficulty beginner">Beginner</p>
+                    <p>Learn to make robust, trendy baskets with bulky t-shirt yarn.</p>
+                </div>
+                <div class="pattern-card" data-category="fashion">
+                    <div class="pattern-icon"><i class="fas fa-tshirt"></i> </div>
+                    <h3>Modern Granny Square Top</h3>
+                    <p class="difficulty intermediate">Intermediate</p>
+                    <p>A fresh and stylish take on a classic crochet technique.</p>
+                </div>
+                <div class="pattern-card" data-category="homeware">
+                    <div class="pattern-icon"><i class="fas fa-rug"></i> </div>
+                    <h3>Spiral Coaster Set</h3>
+                    <p class="difficulty beginner">Beginner</p>
+                    <p>The perfect quick and easy project for stunning coasters.</p>
+                </div>
+                 <div class="pattern-card" data-category="toys">
+                    <div class="pattern-icon"><i class="fas fa-cat"></i> </div>
+                    <h3>Charlie the Cozy Cat</h3>
+                    <p class="difficulty advanced">Advanced</p>
+                    <p>A detailed pattern for a small, adorable amigurumi cat.</p>
+                </div>
+                 <div class="pattern-card" data-category="fashion">
+                    <div class="pattern-icon"><i class="fas fa-scarf"></i> </div>
+                    <h3>Luxe Alpaca Scarf</h3>
+                    <p class="difficulty beginner">Beginner</p>
+                    <p>Wrap yourself in soft luxury with this beginner-friendly knit-look scarf.</p>
+                </div>
+                 <div class="pattern-card" data-category="homeware">
+                    <div class="pattern-icon"><i class="fas fa-chair"></i> </div>
+                    <h3>Macrame-Inspired Pillow</h3>
+                    <p class="difficulty intermediate">Intermediate</p>
+                    <p>A bohemian-style cushion that adds texture to any space.</p>
+                </div>
+                </section>
         </div>
+    </main>
 
-    </div>
-</div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Chic Crochet Creations. Curating patterns with love.</p>
+        </div>
+    </footer>
 
-<!-- ABOUT -->
-<div class="about">
-    <h2>Why Choose Us?</h2>
-    <p>✔ 100% Homemade<br>
-       ✔ Clean & Hygienic Cooking<br>
-       ✔ Fresh Ingredients Daily</p>
-</div>
-
-<!-- FOOTER -->
-<footer>
-    <p>📞 010-1234-5678</p>
-    <p>📍 Seoul, Korea</p>
-</footer>
-
-</body>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script> </body>
 </html>
