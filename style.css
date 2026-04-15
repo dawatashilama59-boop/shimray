@@ -1,131 +1,249 @@
-/* GENERAL */
-body {
+/* --- General Styles --- */
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    padding: 0;
 }
 
-/* HERO SECTION */
-.hero {
-    background: url('https://images.unsplash.com/photo-1498654896293-37aacf113fd9?q=80&w=1400') no-repeat center;
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fafafa;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* --- Container for Page Centering --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Blurry Background Image --- */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Replace with your image's file name */
+    background-image: url('crochet_background.jpg'); 
     background-size: cover;
-    height: 100vh;
-    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); /* Adjust the blur intensity (e.g., 5px to 10px) */
+    z-index: -1; /* Place it behind all other content */
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: rgba(255, 255, 255, 0.9); /* Translucent white header */
+    color: #555;
+    padding: 20px 0;
+    position: sticky; /* Make header stick to the top */
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+header .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.hero-content {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 40px;
-    text-align: center;
-    border-radius: 10px;
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #FF6F61; /* Use a color that matches the orange hook */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.hero h1 {
-    font-size: 50px;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 18px;
-    margin: 10px 0 20px;
-}
-
-/* BUTTON */
-.btn {
-    background: #ff4d4d;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background: #e63946;
-}
-
-/* MENU SECTION */
-.menu {
-    padding: 50px;
-    text-align: center;
-    background: #f9f9f9;
-}
-
-.menu h2 {
-    margin-bottom: 30px;
-    font-size: 28px;
-}
-
-.menu-items {
+nav ul {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    list-style: none;
 }
 
-/* MENU ITEMS */
-.item {
-    width: 250px;
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+nav ul li {
+    margin-left: 20px;
 }
 
-.item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.item img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.item h3 {
-    margin: 10px 0 5px;
-}
-
-.item p {
-    font-size: 14px;
+nav ul li a {
+    text-decoration: none;
     color: #555;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
 }
 
-.item strong {
-    color: #ff4d4d;
-    font-size: 16px;
+nav ul li a.active {
+    color: #FF6F61;
 }
 
-/* ABOUT SECTION */
-.about {
-    padding: 40px;
+nav ul li a:hover {
+    color: #FF6F61;
+}
+
+/* Active navigation line effect */
+nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #FF6F61;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+}
+
+nav ul li a.active::after,
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* --- Main Content Section --- */
+main {
+    padding: 60px 0;
+}
+
+/* --- Hero Section & Filter Buttons --- */
+.hero-section {
     text-align: center;
+    margin-bottom: 50px;
 }
 
-.about h2 {
-    font-size: 28px;
+.hero-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #333;
     margin-bottom: 15px;
 }
 
-.about p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
+.hero-section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    color: #666;
 }
 
-/* FOOTER */
-footer {
-    background: #333;
-    color: white;
+.pattern-filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background-color: #FF6F61;
+    border-color: #FF6F61;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(255, 111, 97, 0.3);
+}
+
+.filter-btn:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.filter-btn.active:hover {
+    background-color: #e06050;
+    color: #fff;
+}
+
+/* --- Patterns Grid --- */
+.patterns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* --- Pattern Cards --- */
+.pattern-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pattern-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.pattern-icon {
+    font-size: 2.5rem;
+    color: #FF6F61;
+    margin-bottom: 20px;
     text-align: center;
-    padding: 20px;
+    height: 60px; /* Optional: if you use actual images */
+}
+
+.pattern-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.difficulty {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.difficulty.beginner {
+    background-color: #E8F5E9;
+    color: #4CAF50;
+}
+
+.difficulty.intermediate {
+    background-color: #FFF3E0;
+    color: #FF9800;
+}
+
+.difficulty.advanced {
+    background-color: #FFEBEE;
+    color: #F44336;
+}
+
+.pattern-card p {
+    font-size: 0.95rem;
+    color: #666;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    color: #555;
 }
 
 footer p {
-    margin: 5px 0;
+    font-size: 0.85rem;
 }
