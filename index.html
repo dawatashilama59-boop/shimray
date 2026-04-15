@@ -1,93 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chic Crochet Creations</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angry Bird Crochet</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Angry Bird Crochet">
+          <span class="brand-mark" aria-hidden="true">Angry Bird</span>
+          <span class="brand-sub">Crochet Studio</span>
+        </a>
 
-    <div class="background-image"></div>
-
-    <header>
-        <div class="container">
-            <h1 class="logo">Chic Crochet</h1>
-            <nav>
-                <ul>
-                    <li><a href="#" class="active">Patterns</a></li>
-                    <li><a href="#">Tutorials</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+            Menu
+          </button>
+          <ul id="nav-links" class="nav-links">
+            <li><a class="nav-link is-active" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#shop">Shop</a></li>
+            <li><a class="nav-link" href="#bestsellers">Best Sellers</a></li>
+            <li><a class="nav-link" href="#contact">Contact Me</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-accent" aria-hidden="true"></div>
     </header>
 
-    <main>
-        <div class="container">
-            <section class="hero-section">
-                <h2>Discover Your Next Modern Crochet Project</h2>
-                <p>Explore our curated collection of contemporary crochet patterns. From cozy blankets and chic homeware to trendy accessories and apparel, we have a pattern for every skill level. </p>
-                <div class="pattern-filters">
-                    <button class="filter-btn active" data-category="all">All</button>
-                    <button class="filter-btn" data-category="homeware">Homeware</button>
-                    <button class="filter-btn" data-category="fashion">Fashion</button>
-                    <button class="filter-btn" data-category="toys">Toys (Amigurumi)</button>
-                </div>
-            </section>
-
-            <section class="patterns-grid" id="patterns-grid">
-                <div class="pattern-card" data-category="homeware">
-                    <div class="pattern-icon"><i class="fas fa-blanket"></i> </div>
-                    <h3>T-Shirt Yarn Basket</h3>
-                    <p class="difficulty beginner">Beginner</p>
-                    <p>Learn to make robust, trendy baskets with bulky t-shirt yarn.</p>
-                </div>
-                <div class="pattern-card" data-category="fashion">
-                    <div class="pattern-icon"><i class="fas fa-tshirt"></i> </div>
-                    <h3>Modern Granny Square Top</h3>
-                    <p class="difficulty intermediate">Intermediate</p>
-                    <p>A fresh and stylish take on a classic crochet technique.</p>
-                </div>
-                <div class="pattern-card" data-category="homeware">
-                    <div class="pattern-icon"><i class="fas fa-rug"></i> </div>
-                    <h3>Spiral Coaster Set</h3>
-                    <p class="difficulty beginner">Beginner</p>
-                    <p>The perfect quick and easy project for stunning coasters.</p>
-                </div>
-                 <div class="pattern-card" data-category="toys">
-                    <div class="pattern-icon"><i class="fas fa-cat"></i> </div>
-                    <h3>Charlie the Cozy Cat</h3>
-                    <p class="difficulty advanced">Advanced</p>
-                    <p>A detailed pattern for a small, adorable amigurumi cat.</p>
-                </div>
-                 <div class="pattern-card" data-category="fashion">
-                    <div class="pattern-icon"><i class="fas fa-scarf"></i> </div>
-                    <h3>Luxe Alpaca Scarf</h3>
-                    <p class="difficulty beginner">Beginner</p>
-                    <p>Wrap yourself in soft luxury with this beginner-friendly knit-look scarf.</p>
-                </div>
-                 <div class="pattern-card" data-category="homeware">
-                    <div class="pattern-icon"><i class="fas fa-chair"></i> </div>
-                    <h3>Macrame-Inspired Pillow</h3>
-                    <p class="difficulty intermediate">Intermediate</p>
-                    <p>A bohemian-style cushion that adds texture to any space.</p>
-                </div>
-                </section>
+    <main id="home" class="site-main">
+      <section class="hero" aria-label="Hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1 class="hero-title">Cozy Crochet Goods</h1>
+            <p class="hero-kicker">Handmade pieces by Angry Bird</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#shop">Shop Now</a>
+              <a class="btn btn-secondary" href="#contact">Custom Order</a>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container section-inner">
+          <h2 class="section-title">About</h2>
+          <p class="section-text">
+            Welcome! Angry Bird Crochet is all about bold color, cozy texture, and beginner-friendly
+            guidance—so you can wear it, gift it, or learn to make it.
+          </p>
+        </div>
+      </section>
+
+      <section id="shop" class="section section-alt">
+        <div class="container section-inner">
+          <h2 class="section-title">Shop</h2>
+          <p class="section-text">
+            Add your product grid here (blankets, bags, hats, plushies). This section is ready for cards
+            or a gallery.
+          </p>
+        </div>
+      </section>
+
+      <section id="bestsellers" class="section">
+        <div class="container section-inner">
+          <h2 class="section-title">Best Sellers</h2>
+          <p class="section-text">Show your most popular items here for quick shopping.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-alt">
+        <div class="container section-inner">
+          <h2 class="section-title">Contact Me</h2>
+          <form class="contact-form" id="contact-form">
+            <label class="field">
+              <span class="field-label">Name</span>
+              <input class="field-input" name="name" type="text" autocomplete="name" required />
+            </label>
+            <label class="field">
+              <span class="field-label">Email</span>
+              <input class="field-input" name="email" type="email" autocomplete="email" required />
+            </label>
+            <label class="field">
+              <span class="field-label">Request type</span>
+              <select class="field-input" name="type" required>
+                <option value="Custom order">Custom order</option>
+                <option value="Product question">Product question</option>
+                <option value="Bulk order">Bulk order</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Item (optional)</span>
+              <input class="field-input" name="item" type="text" placeholder="e.g., tote bag, baby blanket" />
+            </label>
+            <label class="field field-full">
+              <span class="field-label">Message</span>
+              <textarea class="field-input" name="message" rows="4" required></textarea>
+            </label>
+            <p class="section-text contact-help">
+              After you press Send, choose how you want to send your message.
+            </p>
+            <button class="btn btn-primary" type="submit">Generate Message</button>
+          </form>
+
+          <div id="contact-actions" class="contact-actions" hidden>
+            <a id="contact-mailto" class="btn btn-primary" href="#">Open Email App</a>
+            <a id="contact-gmail" class="btn btn-secondary" href="#" target="_blank" rel="noreferrer">
+              Open Gmail
+            </a>
+            <p class="section-text contact-note">
+              Important: you still need to press <strong>Send</strong> in your email app. The website can’t
+              send emails by itself.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="shipping" class="section">
+        <div class="container section-inner">
+          <h2 class="section-title">Shipping & Returns</h2>
+          <p class="section-text">
+            Add your shipping times, pickup options, and return policy here so customers feel confident
+            ordering.
+          </p>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Chic Crochet Creations. Curating patterns with love.</p>
-        </div>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-text">© <span id="year"></span> Angry Bird Crochet</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script> </body>
+  </body>
 </html>
